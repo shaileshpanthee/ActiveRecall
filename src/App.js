@@ -4,18 +4,24 @@ import "./App.css";
 
 function QuestionCard() {
   const [eachQues, setEachQues] = React.useState(MeckelsDiverticulum);
-  const questionAndAnswer = MeckelsDiverticulum.map((obj) => {
+  let counter = 0;
+  const questionAndAnswer = eachQues.map((obj) => {
+    counter = counter + 1;
+    const index = eachQues.indexOf(obj);
     function toggleShow() {
       setEachQues((prev) => {
-        return [...prev, (obj.show = !obj.show)];
+        prev[index].show = !prev[index].show;
+        return [...prev];
       });
       console.log("Clicked");
     }
-    console.log(obj.answer);
+    //console.log(obj.answer);
     return (
       <div className="both-ques-ans-card">
         <div className="questionAndSubmit">
-          <div className="question">{obj.question}</div>
+          <div className="question">
+            {counter}. {obj.question}
+          </div>
           <button className="show-button" onClick={toggleShow}>
             Show
           </button>
@@ -31,7 +37,7 @@ function QuestionCard() {
 function App() {
   return (
     <>
-      <div>Meckel's Diverticulum</div>
+      <div className="chapter">Meckel's Diverticulum</div>
       <hr />
       <div>
         <QuestionCard />
