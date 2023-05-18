@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ActiveRecall/static/css/main.0458f1a2.css",
-    "main.js": "/ActiveRecall/static/js/main.4e502d15.js",
+    "main.css": "/ActiveRecall/static/css/main.bed0545b.css",
+    "main.js": "/ActiveRecall/static/js/main.0622268b.js",
     "index.html": "/ActiveRecall/index.html",
-    "main.0458f1a2.css.map": "/ActiveRecall/static/css/main.0458f1a2.css.map",
-    "main.4e502d15.js.map": "/ActiveRecall/static/js/main.4e502d15.js.map"
+    "main.bed0545b.css.map": "/ActiveRecall/static/css/main.bed0545b.css.map",
+    "main.0622268b.js.map": "/ActiveRecall/static/js/main.0622268b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0458f1a2.css",
-    "static/js/main.4e502d15.js"
+    "static/css/main.bed0545b.css",
+    "static/js/main.0622268b.js"
   ]
 }
