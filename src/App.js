@@ -1,8 +1,15 @@
 import React from "react";
-import { MeckelsDiverticulum } from "./Subjects/Surgery/MeckelsDiverticulum";
+import { useState } from "react";
+import {
+  MeckelsDiverticulum,
+  MeckelsDiverticulumNote,
+} from "./Subjects/Surgery/MeckelsDiverticulum";
 import "./App.css";
+import Try from "./Try";
 
-function QuestionCard() {
+function QuestionCard(prop) {
+  const text = MeckelsDiverticulumNote;
+
   const [eachQues, setEachQues] = React.useState(MeckelsDiverticulum);
   let counter = 0;
   const questionAndAnswer = eachQues.map((obj) => {
@@ -31,16 +38,63 @@ function QuestionCard() {
     );
   });
 
-  return <div>{questionAndAnswer}</div>;
+  return (
+    <>
+      <div
+        className="all-text"
+        style={{
+          marginTop: "40px",
+          marginLeft: "10px",
+          fontSize: "1.1em",
+        }}
+      >
+        {" "}
+        {prop.toDisplay === "Notes" ? text : questionAndAnswer}
+      </div>
+    </>
+  );
 }
 
 function App() {
+  const [displayType, setDisplayType] = useState("ActiveRecall");
+
+  console.log(displayType);
+
   return (
     <>
-      <div className="chapter">Meckel's Diverticulum</div>
-      <hr />
+      <div
+        style={{
+          display: "block",
+        }}
+        className="chapter"
+      >
+        Meckel's Diverticulum
+      </div>
+      <div className="buttons">
+        <div
+          className="button-display-type"
+          style={{
+            display: "block",
+          }}
+        >
+          <button
+            className="note-active-recall-buttons"
+            onClick={() => setDisplayType("Notes")}
+          >
+            Notes
+          </button>
+          <button
+            className="note-active-recall-buttons"
+            onClick={() => setDisplayType("ActiveRecall")}
+          >
+            Active Recall
+          </button>
+        </div>
+      </div>
+
       <div>
-        <QuestionCard />
+        <QuestionCard toDisplay={displayType} />
+        <Try />
       </div>
     </>
   );

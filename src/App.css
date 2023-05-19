@@ -1,3 +1,24 @@
+.button-display-type {
+  float: right;
+}
+
+.note-active-recall-buttons {
+  background-color: rgb(238, 19, 165);
+  border-style: none;
+  border-radius: 50px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 10px 16px;
+  color: white;
+}
+
+.buttonsAndChapter {
+}
+
+.all-text {
+  white-space: pre-line;
+}
+
 .both-ques-ans-card {
   width: auto;
   margin-top: 10px;
@@ -8,7 +29,7 @@
 }
 
 .question {
-  font-weight: "bolder";
+  font-weight: "bold";
   font-size: 1.2em;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -17,6 +38,8 @@
   font-family: Garamond, Geneva, Tahoma, sans-serif;
   font-size: 1.1em;
   white-space: pre-line;
+  margin-top: 10px;
+  background-color: rgb(218, 255, 240);
 }
 .questionAndSubmit {
   display: flex;
@@ -41,7 +64,8 @@
 
 .chapter {
   font-weight: bolder;
-  text-align: center;
+  text-align: left;
   font-size: 1.3em;
   color: rgb(49, 3, 3);
+  display: block;
 }
